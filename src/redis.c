@@ -306,7 +306,7 @@ void redisLogRaw(int level, const char *msg) {
     if (!fp) return;
 
     if (rawmode) {
-        fprintf(fp,"%s",msg);
+        fprintf(fp,"msg[%s]",msg);
     } else {
         int off;
         struct timeval tv;
